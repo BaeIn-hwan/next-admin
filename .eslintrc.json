@@ -27,7 +27,7 @@
     "@typescript-eslint/no-explicit-any": "warn", // typescript any 사용
     "@typescript-eslint/no-shadow": "warn",
     "@typescript-eslint/no-use-before-define": "warn",
-    "@typescript-eslint/no-unused-vars": "warn",
+    "@typescript-eslint/no-unused-vars": "error",
     "@typescript-eslint/no-var-requires": 0,
     "@typescript-eslint/semi": "off",
     "consistent-return": "off", // return문 사용 옵션
@@ -64,7 +64,7 @@
     "no-console": "warn",
     "no-undef": "warn",
     "no-useless-catch": "off", // 불필요한 catch 못쓰게 사용
-    "no-unused-vars": "warn",
+    "no-unused-vars": "error",
     "no-nested-ternary": "off",
     "no-plusplus": ["error", { "allowForLoopAfterthoughts": true }],
     "no-restricted-syntax": "off",
