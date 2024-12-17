@@ -20,7 +20,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   const str = "1234";
-  console.log(error);
+  console.log("에러를 냅시다", ㅂㅈㄷ);
 
   return (
     <html lang="ko">
