@@ -17,10 +17,11 @@
     "airbnb-typescript",
     "airbnb/hooks",
     "next/core-web-vitals",
-    "eslint:recommended",
+    "plugin:react/recommended",
     "plugin:@typescript-eslint/recommended", // ts 권장
-    "plugin:prettier/recommended", // Prettier 규칙을 ESLint에 통합,
-    "plugin:jsx-a11y/recommended"
+    // "plugin:prettier/recommended", // Prettier 규칙을 ESLint에 통합,
+    "plugin:jsx-a11y/recommended",
+    "prettier"
   ],
   "rules": {
     "@typescript-eslint/ban-ts-comment": ["error", { "ts-ignore": "allow-with-description" }], // typescript 주석

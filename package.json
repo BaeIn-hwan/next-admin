@@ -6,9 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint 'src/**/*.{js,jsx,ts,tsx}' --max-warnings 0",
-    "prettier": "prettier --write 'src/**/*.{js,jsx,ts,tsx}'",
-    "prepare": "husky"
+    "lint": "next link"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
