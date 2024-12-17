@@ -1,3 +1,82 @@
 {
-  "extends": "next/core-web-vitals"
+  "root": true,
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["jsx-a11y", "@typescript-eslint", "prettier"],
+  "parserOptions": {
+    "project": "./tsconfig.json",
+    "createDefaultProgram": true
+  },
+  // 전역객체를 eslint가 인식하는 구간
+  "env": {
+    "browser": true, // document나 window 인식되게 함
+    "node": true,
+    "es6": true
+  },
+  "extends": [
+    "airbnb",
+    "airbnb-typescript",
+    "airbnb/hooks",
+    "next/core-web-vitals",
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended", // ts 권장
+    "plugin:prettier/recommended", // Prettier 규칙을 ESLint에 통합,
+    "plugin:jsx-a11y/recommended"
+  ],
+  "rules": {
+    "@typescript-eslint/ban-ts-comment": ["error", { "ts-ignore": "allow-with-description" }], // typescript 주석
+    "@typescript-eslint/no-explicit-any": "warn", // typescript any 사용
+    "@typescript-eslint/no-shadow": "warn",
+    "@typescript-eslint/no-use-before-define": "warn",
+    "@typescript-eslint/no-unused-vars": "warn",
+    "@typescript-eslint/no-var-requires": 0,
+    "@typescript-eslint/semi": "off",
+    "consistent-return": "off", // return문 사용 옵션
+    "guard-for-in": "off",
+    "import/no-extraneous-dependencies": "off",
+    "import/prefer-default-export": "off",
+    "import/order": [
+      "error",
+      {
+        "groups": ["builtin", "external", "internal", "parent", "sibling", "index"],
+        "pathGroups": [
+          {
+            "pattern": "next(/**)?",
+            "group": "external",
+            "position": "after"
+          }
+        ],
+        "pathGroupsExcludedImportTypes": ["builtin"],
+        "newlines-between": "always",
+        "alphabetize": {
+          "order": "asc",
+          "caseInsensitive": true
+        }
+      }
+    ],
+    "jsx-a11y/label-has-associated-control": [
+      2,
+      {
+        "labelAttributes": ["htmlFor"]
+      }
+    ],
+    "linebreak-style": "off",
+    "no-alert": "warn",
+    "no-console": "warn",
+    "no-undef": "warn",
+    "no-useless-catch": "off", // 불필요한 catch 못쓰게 사용
+    "no-unused-vars": "warn",
+    "no-nested-ternary": "off",
+    "no-plusplus": ["error", { "allowForLoopAfterthoughts": true }],
+    "no-restricted-syntax": "off",
+    "no-underscore-dangle": "off",
+    "prefer-destructuring": "off",
+    "prettier/prettier": "error",
+    "react/button-has-type": "warn",
+    "react-hooks/rules-of-hooks": "error",
+    "react/react-in-jsx-scope": "off", // react 17부턴 import 안해도돼서 기능 끔
+    "react/require-default-props": "off", // react 18.3 부터 defaultProps 안해도됨.
+    "react/jsx-filename-extension": ["warn", { "extensions": [".ts", ".tsx"] }], // 경고표시, 파일 확장자를 .ts나 .tsx 모두 허용함
+    "react/jsx-no-useless-fragment": "warn",
+    "react/jsx-props-no-spreading": "off"
+  }
 }

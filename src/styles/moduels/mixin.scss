@@ -1,0 +1,18 @@
+// 사용법 : @include line(라인수)
+@mixin line($row: 1) {
+  @if ($row == 1) {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  } @else {
+    /* autoprefixer: on */
+    overflow: hidden;
+    display: block;
+    display: -webkit-box;
+    text-overflow: ellipsis;
+    /* autoprefixer: off */
+    -webkit-box-orient: vertical;
+    word-break: break-all;
+    -webkit-line-clamp: $row;
+  }
+}
