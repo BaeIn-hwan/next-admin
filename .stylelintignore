@@ -1,3 +1,6 @@
+.next
 /node_modules
-
-next.config.ts
+public
+README.md
+Dockerfile
+next.config.mjs
