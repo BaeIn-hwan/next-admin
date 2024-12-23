@@ -6,13 +6,14 @@ NEXT JS(v14) ADMIN
 - NPM : v9.9.4+
 
 ## SKILL
-- MUI - Material UI + Emotion
+- MUI(Material UI)
 - SCSS
 - Zustand
 - TanStack-Query(v5)
 - ESLint
 - Prettier
 - StyleLint
+- Husky
 
 ## START
 ```bash
@@ -22,21 +23,28 @@ npm run prod // production mode
 ```
 
 ## FOLDER TREE
+FSD (Feature-Sliced Design) 아키텍처 기반의 구조
+
+<img src="https://feature-sliced.design/kr/assets/images/visual_schema-e826067f573946613dcdc76e3f585082.jpg" alt="FSD 계층 구조">
+
 ```
-├── public
-│   ├── assets        # 정적파일
-│   │   ├── fonts     # 폰트
-│   │   ├── images    # 이미지
-├── src
-│   ├── app           # App Router
-│   ├── components    # 컴포넌트
-│   ├── constants     # 상수에 쓰이는
-│   ├── hooks         # 커스텀 훅
-│   ├── layout        # 공통 레이아웃
-│   ├── pages         # 페이지
-│   ├── queries       # ReactQuery
-│   ├── utils         # 재사용 함수 및 모듈화
-│   ├── styles        # 스타일 관련
-│   ├── store         # 상태관리
-│   ├── middleware    # middleware
+├── 📂 public
+│   ├── 📂 assets
+│   │   ├── 📂 fonts
+│   │   ├── 📂 images
+├── 📂 src
+│   ├── 📂 app
+│   ├── 📂 entities
+│   │   ├── 📂 apis
+│   ├── 📂 features
+│   ├── 📂 layout
+│   ├── 📂 pages
+│   ├── 📂 shared
+│   │   ├── 📂 apis
+│   │   ├── 📂 constants
+│   │   ├── 📂 hooks
+│   │   ├── 📂 ui
+│   │   ├── 📂 utils
+│   ├── 📂 styles
+│   ├── 📂 widgets
 ```

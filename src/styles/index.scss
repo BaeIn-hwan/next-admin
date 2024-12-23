@@ -1,4 +1,6 @@
-@use "./moduels/reset";
+@use "./modules/variable";
+@use "./modules/mixin";
+@use "./modules/reset";
 
 .blind {
   overflow: hidden;

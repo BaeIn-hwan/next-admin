@@ -1,5 +1,5 @@
 * {
-  text-size-adjust: none;
+  -webkit-text-size-adjust: none;
   box-sizing: border-box;
 }
 
@@ -66,8 +66,8 @@ textarea {
     "Open Sans",
     "Helvetica Neue",
     sans-serif;
-  -webkit-font-smoothing: antialiased;
   line-height: normal;
+  -webkit-font-smoothing: antialiased;
 }
 
 a,
