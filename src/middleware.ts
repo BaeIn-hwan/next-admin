@@ -3,6 +3,7 @@ import type { NextRequest } from "next/server";
 
 // This function can be marked `async` if using `await` inside
 export function middleware(request: NextRequest) {
+  // eslint-disable-next-line no-console
   console.log("midldeware request", request);
 
   // fetch("https://jsonplaceholder.typicode.com/todos/1")
