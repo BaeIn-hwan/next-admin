@@ -22,13 +22,13 @@ export default function MainIndex() {
 
   return (
     <Box margin="30px">
-      <div>
-        <DatePicker format="YYYY-MM-DD" value={selectDate} onChange={handleChangeDate} />
-        <div>{selectDate.format("YYYY-MM-DD")}</div>
-        <Box margin="10px">
-          <TextField label="tete" />
-        </Box>
-      </div>
+      <DatePicker format="YYYY-MM-DD" value={selectDate} onChange={handleChangeDate} sx={{ width: "50%" }} />
+
+      <div>{selectDate.format("YYYY-MM-DD")}</div>
+
+      <Box margin="10px">
+        <TextField label="tete" />
+      </Box>
     </Box>
   );
 }
