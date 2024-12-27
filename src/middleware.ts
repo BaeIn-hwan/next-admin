@@ -3,11 +3,11 @@ import type { NextRequest } from "next/server";
 
 // This function can be marked `async` if using `await` inside
 export function middleware(request: NextRequest) {
-  console.log("request123", request);
+  console.log("midldeware request", request);
 
-  fetch("https://jsonplaceholder.typicode.com/todos/1")
-    .then((response) => response.json())
-    .then((json) => console.log("json", json));
+  // fetch("https://jsonplaceholder.typicode.com/todos/1")
+  //   .then((response) => response.json())
+  //   .then((json) => console.log("json", json));
   return NextResponse.next();
 }
 

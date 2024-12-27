@@ -1,0 +1,12 @@
+.header {
+  height: 70px;
+  background-color: skyblue;
+
+  &__logo {
+    &-link {
+      font-size: 36px;
+      color: #000;
+      line-height: 36px;
+    }
+  }
+}
