@@ -5,35 +5,62 @@ import { Link } from "@/shared/ui/Link";
 
 const GnbList = [
   {
-    url: "/sign-up",
-    title: "SIGN UP",
+    url: "/",
+    title: "Menu01",
   },
   {
-    url: "#",
-    title: "준비중",
+    url: "/",
+    title: "Menu02",
   },
   {
-    url: "#",
-    title: "준비중",
+    url: "/",
+    title: "Menu03",
+  },
+  {
+    url: "/",
+    title: "Menu04",
   },
 ];
 
 export default function Header() {
   return (
-    <Box component="header" height="70px" position="sticky" top={0} left={0}>
-      <Box display="flex" alignItems="center" justifyContent="space-between" height="100%" padding="6px 18px">
-        <Box component="h1" fontSize={0}>
-          <Link href="/" display="block" fontSize="32px" color="#000" lineHeight="20px">
+    <Box component="header" height="70px" position="sticky" top={0} left={0} borderBottom="1px solid #000">
+      <Box display="flex" alignItems="center" height="100%">
+        <Box
+          component="h1"
+          display="flex"
+          alignItems="center"
+          height="100%"
+          px="20px"
+          borderRight="1px solid #000"
+          fontSize={0}
+        >
+          <Link href="/" display="block" fontSize="32px" color="#000" lineHeight="32px">
             LOGO
           </Link>
         </Box>
 
-        <Box component="nav">
-          <Stack component="ul" direction="row" alignItems="center" spacing={2}>
-            {GnbList.map((item, index) => (
-              // eslint-disable-next-line react/no-array-index-key
-              <Box component="li" key={`${item.url}${index}`}>
-                <Link href={item.url} display="block" fontSize="16px" lineHeight="20px">
+        <Box component="nav" height="100%">
+          <Stack component="ul" direction="row" alignItems="center" height="100%">
+            {GnbList.map((item) => (
+              <Box
+                component="li"
+                key={`${item.url}${item.title}`}
+                display="flex"
+                alignItems="center"
+                height="100%"
+                borderRight="1px solid #000"
+              >
+                <Link
+                  href={item.url}
+                  display="flex"
+                  alignItems="center"
+                  justifyContent="center"
+                  height="100%"
+                  px="10px"
+                  fontSize="16px"
+                  lineHeight="100%"
+                >
                   {item.title}
                 </Link>
               </Box>

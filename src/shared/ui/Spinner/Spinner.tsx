@@ -1,5 +1,10 @@
+import { Box, CircularProgress } from "@mui/material";
 import React from "react";
 
 export default function Spinner() {
-  return <div>Spinner</div>;
+  return (
+    <Box sx={{ display: "flex" }}>
+      <CircularProgress />
+    </Box>
+  );
 }

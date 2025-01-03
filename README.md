@@ -50,3 +50,5 @@ FSD (Feature-Sliced Design) 아키텍처 기반의 구조
 ```
 
 * App, Shared는 슬라이스를 가지지 않으며 세그먼트로 구성
+
+단일인 경우에는 세그먼트(segment) 만들지 말 것!

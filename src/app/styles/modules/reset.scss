@@ -2,12 +2,15 @@
   -webkit-text-size-adjust: none;
   box-sizing: border-box;
 
+  // &:not([class*="Mui"] input, [class*="Mui"] legend, caption) {
+  //   line-height: normal;
+  // }
   &:not([class*="Mui"] *) {
     line-height: normal;
   }
 }
 
-* html,
+html,
 body,
 div,
 header,
@@ -80,7 +83,9 @@ a:link,
 a:visited,
 a:active,
 a:hover {
-  text-decoration: none;
+  &:not([class*="Mui"]) {
+    text-decoration: none;
+  }
 }
 
 em,

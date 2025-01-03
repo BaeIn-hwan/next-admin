@@ -6,12 +6,11 @@ import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import type { IProsDatePicker } from "./types";
 import "dayjs/locale/ko";
 
-function DatePicker(props: IProsDatePicker) {
+export default function DatePicker(props: IProsDatePicker) {
   const { sx, ...rest } = props;
 
   return (
     <LocalizationProvider dateAdapter={AdapterDayjs} adapterLocale="ko">
-      {/* <MuiDateContainer components={["DatePicker"]} sx={{ width, minWidth: "auto !important", paddingTop: 0 }}> */}
       <MuiDatePicker
         {...rest}
         sx={{ width: "100%", minWidth: "auto !important", ...sx }}
@@ -20,9 +19,6 @@ function DatePicker(props: IProsDatePicker) {
           openPickerIcon: { fontSize: "small" },
         }}
       />
-      {/* </MuiDateContainer> */}
     </LocalizationProvider>
   );
 }
-
-export default DatePicker;

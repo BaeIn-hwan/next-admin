@@ -9,10 +9,10 @@ interface IPropsLink extends LinkProps, LinkOwnProps {
 }
 
 export default function Link(props: IPropsLink) {
-  const { children, href = "#", ...rest } = props;
+  const { children, href = "#", underline = "none", color = "inherit", ...rest } = props;
 
   return (
-    <MuiLink component={NextLink} href={href} {...rest}>
+    <MuiLink component={NextLink} href={href} underline={underline} color={color} {...rest}>
       {children}
     </MuiLink>
   );
